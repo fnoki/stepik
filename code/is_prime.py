@@ -12,4 +12,5 @@ def is_prime(num: int) -> bool:
     else:
         return False
 
+
 print(is_prime(_input))
