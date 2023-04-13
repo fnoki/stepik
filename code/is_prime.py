@@ -1,6 +1,8 @@
-def is_prime(num):
+_input = int(input())
+
+
+def is_prime(num: int) -> bool:
     balance = 0
-    num = int(num)
     for i in range(1, num):
         if num % i == 0:
             balance += 1
@@ -10,4 +12,4 @@ def is_prime(num):
     else:
         return False
 
-print(is_prime(72))
+print(is_prime(_input))
