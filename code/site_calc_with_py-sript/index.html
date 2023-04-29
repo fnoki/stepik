@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.P</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <py-config src="./pyscript.toml"></py-config>
+    <py-script src="./main.py"></py-script>
+</head>
+<body>
+
+    <div class="calc">
+
+        <div class="value">
+            <p id="current-value">0</p>
+        </div>
+
+        <div class="flex">
+            <div class="num">
+                <div class="symbol">
+                    <button class="btn arithmetic" py-click="arithmetic_operation('/')">/</button>
+                    <button class="btn arithmetic" py-click="arithmetic_operation('**')">^</button>
+                    <button class="btn arithmetic" py-click="arithmetic_operation('coren')">√x</button>
+                </div>
+                <div class="1-3">
+                    <button class="btn number" py-click="calc(1)">1</button>
+                    <button class="btn number" py-click="calc(2)">2</button>
+                    <button class="btn number" py-click="calc(3)">3</button>
+                </div>
+                <div class="4-6">
+                    <button class="btn number" py-click="calc(4)">4</button>
+                    <button class="btn number" py-click="calc(5)">5</button>
+                    <button class="btn number" py-click="calc(6)">6</button>
+                </div>
+                <div class="6-9">
+                    <button class="btn number" py-click="calc(7)">7</button>
+                    <button class="btn number" py-click="calc(8)">8</button>
+                    <button class="btn number" py-click="calc(9)">9</button>
+                </div>
+                <div class="some">
+                    <button class="btn number" py-click="calc(0)">0</button>
+                    <button class="btn number" py-click="calc(-2)">.</button>
+                    <button class="btn arithmetic" py-click="calc(-1)"><-</button>
+                </div>
+            </div>
+            <div class="grustno">
+                <div><button class="btn arithmetic" py-click="arithmetic_operation('*')">*</button></div>
+                <div><button class="btn arithmetic" py-click="arithmetic_operation('+')">+</button></div>
+                <div><button class="btn arithmetic" py-click="arithmetic_operation('-')">-</button></div>
+
+                <div><button class="btn arithmetic" py-click="arithmetic_operation('corenx2')">^2</button></div>
+                <div><button class="btn arithmetic" py-click="equals()">=</button></div>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
