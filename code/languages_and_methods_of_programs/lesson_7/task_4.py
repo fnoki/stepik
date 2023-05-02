@@ -6,5 +6,5 @@ employee = {
     'employee3': {'name': 'John', 'age': 25, 'salary': 250000}
 }
 
-json.dump(employee, file)
+json.dump(employee, file) # записать словарь в файл
 file.close()
