@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
+    <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+    <py-config src="./pyscript.toml"></py-config>
+    <py-script src="./main.py"></py-script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div class="flex_middle">
+        <div>
+            <div class="text-field">
+                <h1 class="title">Log 0.1v</h1>
+                <label class="text-field__label" for="login">Логин</label>
+                <input class="text-field__input" type="text" name="login" id="log_login" placeholder="Login" value="">
+            </div>
+    
+            <div class="text-field">
+                <label class="text-field__label" for="login">Password</label>
+                <input class="text-field__input" type="password" name="password" id="log_password" placeholder="Password" value="">
+            </div>
+
+            <button py-click="login(Element('log_login').element.value, Element('log_password').element.value)" class="btn">Log In</button>
+
+        </div>
+
+        <div class="namer">
+            <p id="name">Ap</p>
+        </div>
+
+        <div>
+            <h1 class="title">Reg. 0.1v</h1>
+            <div class="text-field">
+                <label class="text-field__label" for="login">Логин</label>
+                <input class="text-field__input" type="text" name="login" id="reg-login" placeholder="Login" value="">
+            </div>
+    
+            <div class="text-field">
+                <label class="text-field__label" for="login">Password</label>
+                <input class="text-field__input" type="password" name="password" id="reg-password" placeholder="Password" value="">
+            </div>
+
+            <button py-click="registration(Element('reg-login').element.value, Element('reg-password').element.value)" class="btn">Register</button>
+            <div class="text_for_need_registration">
+                <p id="reg_more_eight">● Пароль должен быть больше 8 символов.</p>
+                <p id="first_symbol_upper">● Хотя бы один символ строки должен быть с большой буквы.</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
